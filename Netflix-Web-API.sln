@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netflix-Web-API", "Netflix-Web-API\Netflix-Web-API.csproj", "{EDC3B43C-7B62-4304-9B70-71E6D4A17B61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetflixWebAPI", "Netflix-Web-API\NetflixWebAPI.csproj", "{EDC3B43C-7B62-4304-9B70-71E6D4A17B61}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{78AF0285-30D7-4578-9065-B77DF7F16BF2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{560500B2-3AB9-4034-8B68-6BC80D4454AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{EDC3B43C-7B62-4304-9B70-71E6D4A17B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDC3B43C-7B62-4304-9B70-71E6D4A17B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDC3B43C-7B62-4304-9B70-71E6D4A17B61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78AF0285-30D7-4578-9065-B77DF7F16BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78AF0285-30D7-4578-9065-B77DF7F16BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78AF0285-30D7-4578-9065-B77DF7F16BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78AF0285-30D7-4578-9065-B77DF7F16BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{560500B2-3AB9-4034-8B68-6BC80D4454AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{560500B2-3AB9-4034-8B68-6BC80D4454AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{560500B2-3AB9-4034-8B68-6BC80D4454AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{560500B2-3AB9-4034-8B68-6BC80D4454AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
