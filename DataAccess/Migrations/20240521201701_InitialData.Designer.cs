@@ -4,6 +4,7 @@ using DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(NetflixDbContext))]
-    partial class NetflixDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240521201701_InitialData")]
+    partial class InitialData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -481,6 +484,28 @@ namespace DataAccess.Migrations
                     b.HasIndex("SelectionsId");
 
                     b.ToTable("MovieSelection");
+
+                    b.HasData(
+                        new
+                        {
+                            MoviesId = 1,
+                            SelectionsId = 1
+                        },
+                        new
+                        {
+                            MoviesId = 2,
+                            SelectionsId = 1
+                        },
+                        new
+                        {
+                            MoviesId = 3,
+                            SelectionsId = 2
+                        },
+                        new
+                        {
+                            MoviesId = 4,
+                            SelectionsId = 3
+                        });
                 });
 
             modelBuilder.Entity("BusinessLogic.Entities.Movie", b =>

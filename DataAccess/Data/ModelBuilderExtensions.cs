@@ -95,16 +95,6 @@ namespace DataAccess.Data
                 GenreId = 10
             }
         });
-
-            builder.Entity<Selection>()
-                .HasMany(s => s.Movies)
-                .WithMany(m => m.Selections)
-                .UsingEntity(j => j.HasData(
-                    new { SelectionsId = 1, MoviesId = 1 },
-                    new { SelectionsId = 1, MoviesId = 2 },
-                    new { SelectionsId = 2, MoviesId = 3 },
-                    new { SelectionsId = 3, MoviesId = 4 }
-                ));
         }
     }
 }
