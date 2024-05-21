@@ -18,7 +18,7 @@ namespace DataAccess.Data
 
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-           // modelBuilder.SeedData();
+           modelBuilder.SeedData();
         }
     }
 }
