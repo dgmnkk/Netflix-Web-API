@@ -10,5 +10,6 @@ namespace BusinessLogic.Interfaces
     public interface IGenresService
     {
         Task<IEnumerable<GenreDto>> GetAll();
+        Task<GenreDto> Get(int id);
     }
 }

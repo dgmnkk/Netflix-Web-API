@@ -23,5 +23,11 @@ namespace BusinessLogic.Services
             return mapper.Map<List<SelectionDto>>(selectionR.GetAll());
         }
 
+        public async Task<SelectionDto?> Get(int id)
+        {
+            var item = await selectionR.GetListBySpec(new SelectionSpecs.ById(id));
+            if (item == null) throw new HttpException(Errors.ItemNotFound, HttpStatusCode.NotFound);
+            return mapper.Map<SelectionDto?>(item);
+        }
     }
 }

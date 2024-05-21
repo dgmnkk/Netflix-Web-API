@@ -23,5 +23,11 @@ namespace BusinessLogic.Services
             return mapper.Map<List<GenreDto>>(genresR.GetAll());
         }
 
+        public async Task<GenreDto?> Get(int id)
+        {
+            var item = await genresR.GetListBySpec(new GenreSpecs.ById(id));
+            if (item == null) throw new HttpException(Errors.ItemNotFound, HttpStatusCode.NotFound);
+            return mapper.Map<GenreDto?>(item);
+        }
     }
 }
