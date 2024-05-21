@@ -9,19 +9,20 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace BusinessLogic.Specifications
 {
-    public static class RefreshTokenSpecs
+    internal static class RefreshTokenSpecs
     {
-        public class ByToken : Specification<RefreshToken>
+        internal class ByToken : Specification<RefreshToken>
         {
             public ByToken(string value)
             {
                 Query.Where(x => x.Token == value);
             }
         }
-        public class ByDate : Specification<RefreshToken>
+        internal class CreatedBy : Specification<RefreshToken>
         {
-            public ByDate(DateTime date)
+            public CreatedBy(DateTime date)
             {
+
                 Query.Where(x => x.CreationDate < date);
             }
         }

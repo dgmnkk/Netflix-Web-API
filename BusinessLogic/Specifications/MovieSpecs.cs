@@ -36,5 +36,25 @@ namespace BusinessLogic.Specifications
                     .Include(x => x.Genre).Include(x => x.Selections);
             }
         }
+
+        public class ByGenre : Specification<Movie>
+        {
+            public ByGenre(int genreId)
+            {
+                Query
+                    .Where(x => x.GenreId == genreId)
+                    .Include(x => x.Genre).Include(x => x.Selections);
+            }
+        }
+
+        public class BySelection : Specification<Movie>
+        {
+            public BySelection(int selectionId)
+            {
+                Query
+                    .Where(x => x.GenreId == selectionId)
+                    .Include(x => x.Genre).Include(x => x.Selections);
+            }
+        }
     }
 }
