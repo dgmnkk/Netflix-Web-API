@@ -1,11 +1,5 @@
 ﻿using BusinessLogic.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.Data
 {
@@ -29,7 +23,7 @@ namespace DataAccess.Data
 
             builder.Entity<Selection>().HasData(new[]
             {
-            new Selection { Id = 1, Title = "Top Picks for You" },
+            new Selection { Id = 1, Title = "Top Picks for You"},
             new Selection { Id = 2, Title = "Trending Now" },
             new Selection { Id = 3, Title = "New Releases" },
             new Selection { Id = 4, Title = "Critically Acclaimed" }
@@ -43,9 +37,9 @@ namespace DataAccess.Data
                 Id = 1,
                 Title = "Inception",
                 Description = "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
-                Image = "https://example.com/images/inception.jpg",
-                Trailer = "https://example.com/trailers/inception.mp4",
-                Video = "https://example.com/videos/inception.mp4",
+                Image = "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg",
+                Trailer = "https://www.youtube.com/embed/YoHD9XEInc0?si=opW8GH5IUHDsAC3B",
+                Video = "https://www.youtube.com/embed/YoHD9XEInc0?si=opW8GH5IUHDsAC3B",
                 Duration = new TimeSpan(2, 28, 0),
                 Year = 2010,
                 Limit = 13,
@@ -57,9 +51,9 @@ namespace DataAccess.Data
                 Id = 2,
                 Title = "The Dark Knight",
                 Description = "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
-                Image = "https://example.com/images/darkknight.jpg",
-                Trailer = "https://example.com/trailers/darkknight.mp4",
-                Video = "https://example.com/videos/darkknight.mp4",
+                Image = "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
+                Trailer = "https://www.youtube.com/embed/EXeTwQWrcwY?si=hddCS66gMkU1nVQc",
+                Video = "https://www.youtube.com/embed/EXeTwQWrcwY?si=hddCS66gMkU1nVQc",
                 Duration = new TimeSpan(2, 32, 0),
                 Year = 2008,
                 Limit = 13,
@@ -71,9 +65,9 @@ namespace DataAccess.Data
                 Id = 3,
                 Title = "The Godfather",
                 Description = "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
-                Image = "https://example.com/images/godfather.jpg",
-                Trailer = "https://example.com/trailers/godfather.mp4",
-                Video = "https://example.com/videos/godfather.mp4",
+                Image = "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+                Trailer = "https://www.youtube.com/embed/UaVTIH8mujA?si=yzboJoRqQfriwnTr",
+                Video = "https://www.youtube.com/embed/UaVTIH8mujA?si=yzboJoRqQfriwnTr",
                 Duration = new TimeSpan(2, 55, 0),
                 Year = 1972,
                 Limit = 17,
@@ -85,9 +79,9 @@ namespace DataAccess.Data
                 Id = 4,
                 Title = "Toy Story",
                 Description = "A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room.",
-                Image = "https://example.com/images/toystory.jpg",
-                Trailer = "https://example.com/trailers/toystory.mp4",
-                Video = "https://example.com/videos/toystory.mp4",
+                Image = "https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_.jpg",
+                Trailer = "https://www.youtube.com/embed/CxwTLktovTU?si=1AQilNCmR71uFVpH",
+                Video = "https://www.youtube.com/embed/CxwTLktovTU?si=1AQilNCmR71uFVpH",
                 Duration = new TimeSpan(1, 21, 0),
                 Year = 1995,
                 Limit = 0,
