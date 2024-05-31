@@ -21,6 +21,16 @@ namespace DataAccess.Data
             new Genre { Id = 10, Title = "Cartoon" }
         });
 
+            builder.Entity<MovieSelection>().HasData(new[]
+            {
+                new MovieSelection{ MovieId= 1, SelectionId= 1 },
+                new MovieSelection{MovieId= 1, SelectionId = 4},
+                new MovieSelection{ MovieId= 2, SelectionId= 2},
+                new MovieSelection{MovieId= 3, SelectionId= 3},
+                new MovieSelection{MovieId= 3, SelectionId = 4},
+                new MovieSelection{MovieId= 4, SelectionId= 4}
+            });
+
             builder.Entity<Selection>().HasData(new[]
             {
             new Selection { Id = 1, Title = "Top Picks for You"},

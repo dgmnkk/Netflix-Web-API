@@ -15,7 +15,7 @@ namespace BusinessLogic.Specifications
         {
             public All()
             {
-                Query.Include(x => x.Genre).Include(x => x.Selections);
+                Query.Include(x => x.Genre).Include(x => x.MovieSelection);
             }
         }
         public class ById : Specification<Movie>
@@ -24,7 +24,7 @@ namespace BusinessLogic.Specifications
             {
                 Query
                     .Where(x => x.Id == id)
-                    .Include(x => x.Genre).Include(x => x.Selections);
+                    .Include(x => x.Genre).Include(x => x.MovieSelection);
             }
         }
         public class ByIds : Specification<Movie>
@@ -33,7 +33,7 @@ namespace BusinessLogic.Specifications
             {
                 Query
                     .Where(x => ids.Contains(x.Id))
-                    .Include(x => x.Genre).Include(x => x.Selections);
+                    .Include(x => x.Genre).Include(x => x.MovieSelection);
             }
         }
 
@@ -43,7 +43,7 @@ namespace BusinessLogic.Specifications
             {
                 Query
                     .Where(x => x.GenreId == genreId)
-                    .Include(x => x.Genre).Include(x => x.Selections);
+                    .Include(x => x.Genre).Include(x => x.MovieSelection);
             }
         }
 
@@ -52,8 +52,9 @@ namespace BusinessLogic.Specifications
             public BySelection(int selectionId)
             {
                 Query
-                    .Where(x => x.GenreId == selectionId)
-                    .Include(x => x.Genre).Include(x => x.Selections);
+                    .Where(movie => movie.MovieSelection.Any(ms => ms.SelectionId == selectionId))
+                    .Include(movie => movie.Genre)
+                    .Include(movie => movie.MovieSelection);
             }
         }
     }

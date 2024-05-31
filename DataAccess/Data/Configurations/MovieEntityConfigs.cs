@@ -17,7 +17,6 @@ namespace DataAccess.Data.Configurations
             builder.ToTable("Movies");
 
             builder.HasOne(x => x.Genre).WithMany(x => x.Movies).HasForeignKey(x => x.GenreId);
-            builder.HasMany(x => x.Selections).WithMany(x => x.Movies);
         }
     }
 }

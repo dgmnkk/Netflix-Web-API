@@ -1,11 +1,5 @@
 ﻿using Ardalis.Specification;
 using BusinessLogic.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace BusinessLogic.Specifications
 {
@@ -15,7 +9,7 @@ namespace BusinessLogic.Specifications
         {
             public All()
             {
-                Query.Include(x => x.Movies);
+                Query.Include(x => x.MovieSelection);
             }
         }
         public class ById : Specification<Selection>
@@ -24,7 +18,7 @@ namespace BusinessLogic.Specifications
             {
                 Query
                     .Where(x => x.Id == id)
-                    .Include(x => x.Movies);
+                    .Include(x => x.MovieSelection);
             }
         }
         public class ByIds : Specification<Selection>
@@ -33,7 +27,7 @@ namespace BusinessLogic.Specifications
             {
                 Query
                     .Where(x => ids.Contains(x.Id))
-                    .Include(x => x.Movies);
+                    .Include(x => x.MovieSelection);
             }
         }
     }

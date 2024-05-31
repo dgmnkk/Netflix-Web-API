@@ -4,6 +4,7 @@ using DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(NetflixDbContext))]
-    partial class NetflixDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240531160402_NewTable")]
+    partial class NewTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -212,38 +215,6 @@ namespace DataAccess.Migrations
                     b.HasIndex("SelectionId");
 
                     b.ToTable("MovieSelection");
-
-                    b.HasData(
-                        new
-                        {
-                            MovieId = 1,
-                            SelectionId = 1
-                        },
-                        new
-                        {
-                            MovieId = 1,
-                            SelectionId = 4
-                        },
-                        new
-                        {
-                            MovieId = 2,
-                            SelectionId = 2
-                        },
-                        new
-                        {
-                            MovieId = 3,
-                            SelectionId = 3
-                        },
-                        new
-                        {
-                            MovieId = 3,
-                            SelectionId = 4
-                        },
-                        new
-                        {
-                            MovieId = 4,
-                            SelectionId = 4
-                        });
                 });
 
             modelBuilder.Entity("BusinessLogic.Entities.RefreshToken", b =>

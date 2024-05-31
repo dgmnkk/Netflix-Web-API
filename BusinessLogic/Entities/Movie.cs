@@ -14,6 +14,6 @@
         public decimal Rating { get; set; }
         public Genre? Genre { get; set; }
         public int GenreId { get; set; }
-        public ICollection<Selection>? Selections { get; set; }
+        public ICollection<MovieSelection>? MovieSelection { get; set; }
     }
 }
